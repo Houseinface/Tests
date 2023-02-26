@@ -1,4 +1,4 @@
-package Tests.FeaturesLinks;
+package Tests.AllTests.FeaturesLinks;
 
 import Base.BaseTest;
 import org.testng.annotations.Test;

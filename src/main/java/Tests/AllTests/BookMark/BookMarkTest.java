@@ -1,7 +1,6 @@
-package Tests.BookMark;
+package Tests.AllTests.BookMark;
 
 import Base.BaseTest;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 public class BookMarkTest extends BaseTest {

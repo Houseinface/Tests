@@ -1,4 +1,4 @@
-package Tests.MainPageLinks;
+package Tests.AllTests.MainPageLinks;
 
 import Base.BaseTest;
 import org.testng.annotations.Test;
@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class MainPageLinksTest extends BaseTest {
     @Test
-    public void MainPlinks() throws InterruptedException {
+    public void MainPlinks() {
         basic.open("https://meau.in");
         buttons.clickYoutpic();
         basic.WaitElementCss("#iframeYouTubeVideoFile");

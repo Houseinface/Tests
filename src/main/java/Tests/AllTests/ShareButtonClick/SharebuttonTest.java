@@ -1,12 +1,11 @@
-package Tests.CreatorClick;
+package Tests.AllTests.ShareButtonClick;
 
 import Base.BaseTest;
 import org.testng.annotations.Test;
 
-public class CreatorUrlTest extends BaseTest {
-
+public class SharebuttonTest extends BaseTest {
     @Test
-    public void CreatorLink() throws InterruptedException {
+    public void Shareclick() throws InterruptedException {
         basic.open("https://meau.in/signup");
         basic.WaitElement("//input[@id='usernameID']");
         loginka.EnterLoginData();
@@ -14,10 +13,8 @@ public class CreatorUrlTest extends BaseTest {
         basic.open("https://meau.in/home");
         homeSearch.searchSomething("test1");
         Thread.sleep(2000);
-        clicks.clickOncreator();
-        basic.TabSwitch();
-        asserts.assertUrl("https://meau.in/usercontributor/houseinface");
-        basic.ReturnFirstTab();
+        clicks.shareclick();
+        asserts.sharepopupVisible();
 
         basic.logOut();
     }

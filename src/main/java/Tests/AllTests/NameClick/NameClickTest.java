@@ -1,12 +1,12 @@
-package Tests.Counter;
+package Tests.AllTests.NameClick;
 
 import Base.BaseTest;
 import org.testng.annotations.Test;
 
-public class CounterTest extends BaseTest {
+public class NameClickTest extends BaseTest {
 
     @Test
-    public void counterTest() throws InterruptedException {
+    public void namelink() throws InterruptedException {
         basic.open("https://meau.in/signup");
         basic.WaitElement("//input[@id='usernameID']");
         loginka.EnterLoginData();
@@ -14,19 +14,11 @@ public class CounterTest extends BaseTest {
         basic.open("https://meau.in/home");
         homeSearch.searchSomething("test1");
         Thread.sleep(2000);
-        String attrib = asserts.vievcounterAtt();
         clicks.ClickonName();
-
         basic.TabSwitch();
-        Thread.sleep(2000);
+        basic.assertUrl("https://meau.in/dimastest1");
         basic.ReturnFirstTab();
 
-        basic.open("https://meau.in/home");
-        homeSearch.searchSomething("test1");
-        Thread.sleep(2000);
-        asserts.AttplusOne(attrib);
-
         basic.logOut();
-
     }
 }

@@ -3,9 +3,13 @@ package FullSuite;
 import Base.BaseTest;
 import org.testng.annotations.Test;
 
-public class UnionTest extends BaseTest {
+public class UnionTestLogoutFirst extends BaseTest {
     @Test(priority = 1)
     public void BookmarkClick() throws InterruptedException {
+        try {
+            basic.logOut();
+        } catch (AssertionError | Exception ignored) {
+        }
         basic.open("https://meau.in/signup");
         basic.WaitElement("//input[@id='usernameID']");
         loginka.EnterLoginData();
@@ -28,10 +32,13 @@ public class UnionTest extends BaseTest {
         basic.WaitElementCss(".swal2-confirm.swal2-styled");
         clicks.delpopupyes();
 
-        basic.logOut();
     }
     @Test(priority = 3)
     public void counterTest() throws InterruptedException {
+        try {
+            basic.logOut();
+        } catch (AssertionError | Exception ignored) {
+        }
         basic.open("https://meau.in/signup");
         basic.WaitElement("//input[@id='usernameID']");
         loginka.EnterLoginData();
@@ -51,10 +58,13 @@ public class UnionTest extends BaseTest {
         Thread.sleep(2000);
         asserts.AttplusOne(attrib);
 
-        basic.logOut();
     }
     @Test(priority = 3)
     public void CreatorLink() throws InterruptedException {
+        try {
+            basic.logOut();
+        } catch (AssertionError | Exception ignored) {
+        }
         basic.open("https://meau.in/signup");
         basic.WaitElement("//input[@id='usernameID']");
         loginka.EnterLoginData();
@@ -67,10 +77,13 @@ public class UnionTest extends BaseTest {
         asserts.assertUrl("https://meau.in/usercontributor/houseinface");
         basic.ReturnFirstTab();
 
-        basic.logOut();
     }
     @Test(priority = 3)
     public void boxestest() throws InterruptedException {
+        try {
+            basic.logOut();
+        } catch (AssertionError | Exception ignored) {
+        }
         basic.open("https://meau.in/faq");
         basic.WaitElementCss("[data-target='#collapseOne']");
         faqButtons.firstboxclick();
@@ -83,6 +96,10 @@ public class UnionTest extends BaseTest {
     }
     @Test(priority = 3)
     public void featureslinks(){
+        try {
+            basic.logOut();
+        } catch (AssertionError | Exception ignored) {
+        }
         basic.open("https://meau.in/features");
         featButtons.createmultTLClick();
         basic.TabSwitch();
@@ -125,7 +142,11 @@ public class UnionTest extends BaseTest {
         basic.ReturnFirstTab();
     }
     @Test(priority = 3)
-    public void featureslinksLogined() throws InterruptedException {
+    public void featureslinksLogined() {
+        try {
+            basic.logOut();
+        } catch (AssertionError | Exception ignored) {
+        }
         basic.open("https://meau.in/signup");
         loginka.EnterLoginData();
         basic.WaitElement("//span[@id='leftNav-dashboard-text']");
@@ -171,10 +192,13 @@ public class UnionTest extends BaseTest {
         basic.assertUrl("https://meau.in/add-on-features#linkslocker");
         basic.ReturnFirstTab();
 
-        basic.logOut();
     }
     @Test(priority = 3)
     public void IconT () throws InterruptedException {
+        try {
+            basic.logOut();
+        } catch (AssertionError | Exception ignored) {
+        }
         basic.open("https://meau.in/signup");
         basic.WaitElement("//input[@id='usernameID']");
         loginka.EnterLoginData();
@@ -185,10 +209,13 @@ public class UnionTest extends BaseTest {
         clicks.ClickOnIcon();
         asserts.AssertIconBigImage();
 
-        basic.logOut();
     }
     @Test(priority = 3)
-    public void MainPlinks() throws InterruptedException {
+    public void MainPlinks() {
+        try {
+            basic.logOut();
+        } catch (AssertionError | Exception ignored) {
+        }
         basic.open("https://meau.in");
         buttons.clickYoutpic();
         basic.WaitElementCss("#iframeYouTubeVideoFile");
@@ -249,6 +276,10 @@ public class UnionTest extends BaseTest {
     }
     @Test(priority = 3)
     public void namelink() throws InterruptedException {
+        try {
+            basic.logOut();
+        } catch (AssertionError | Exception ignored) {
+        }
         basic.open("https://meau.in/signup");
         basic.WaitElement("//input[@id='usernameID']");
         loginka.EnterLoginData();
@@ -261,10 +292,13 @@ public class UnionTest extends BaseTest {
         basic.assertUrl("https://meau.in/dimastest1");
         basic.ReturnFirstTab();
 
-        basic.logOut();
     }
     @Test(priority = 3)
     public void NotFoundTest () throws InterruptedException {
+        try {
+            basic.logOut();
+        } catch (AssertionError | Exception ignored) {
+        }
         basic.open("https://meau.in/signup");
         basic.WaitElement("//input[@id='usernameID']");
         loginka.EnterLoginData();
@@ -273,10 +307,13 @@ public class UnionTest extends BaseTest {
         homeSearch.searchSomething("ddrrdrdyy");
         asserts.AssertNotFound();
 
-        basic.logOut();
     }
     @Test(priority = 3)
     public void Shareclick() throws InterruptedException {
+        try {
+            basic.logOut();
+        } catch (AssertionError | Exception ignored) {
+        }
         basic.open("https://meau.in/signup");
         basic.WaitElement("//input[@id='usernameID']");
         loginka.EnterLoginData();
@@ -287,10 +324,13 @@ public class UnionTest extends BaseTest {
         clicks.shareclick();
         asserts.sharepopupVisible();
 
-        basic.logOut();
     }
     @Test(priority = 3)
     public void SpinTest () throws InterruptedException {
+        try {
+            basic.logOut();
+        } catch (AssertionError | Exception ignored) {
+        }
         basic.open("https://meau.in/signup");
         basic.WaitElement("//input[@id='usernameID']");
         loginka.EnterLoginData();
@@ -299,6 +339,5 @@ public class UnionTest extends BaseTest {
         homeSearch.searchSomething("test");
         asserts.AssertSpinner();
 
-        basic.logOut();
     }
 }

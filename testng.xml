@@ -3,7 +3,7 @@
 <suite name="All Test Suite">
     <test name="E:/Tests">
         <classes>
-            <class name="FullSuite.UnionTest"/>
+            <class name="Tests.Suites.UnionTest"/>
         </classes>
     </test>
 </suite>
