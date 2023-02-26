@@ -1,4 +1,4 @@
-package Tests.AllTests.MainPageLinks;
+package AllTests.MainPageLinks;
 
 import Base.BaseTest;
 import org.testng.annotations.Test;

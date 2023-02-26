@@ -1,20 +1,18 @@
-package Tests.AllTests.ShareButtonClick;
+package AllTests.SearchResults;
 
 import Base.BaseTest;
 import org.testng.annotations.Test;
 
-public class SharebuttonTest extends BaseTest {
+public class SearchNotFoundTest extends BaseTest {
     @Test
-    public void Shareclick() throws InterruptedException {
+    public void NotFoundTest () throws InterruptedException {
         basic.open("https://meau.in/signup");
         basic.WaitElement("//input[@id='usernameID']");
         loginka.EnterLoginData();
         basic.WaitElement("//span[@id='leftNav-dashboard-text']");
         basic.open("https://meau.in/home");
-        homeSearch.searchSomething("test1");
-        Thread.sleep(2000);
-        clicks.shareclick();
-        asserts.sharepopupVisible();
+        homeSearch.searchSomething("ddrrdrdyy");
+        asserts.AssertNotFound();
 
         basic.logOut();
     }

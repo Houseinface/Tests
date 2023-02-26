@@ -1,4 +1,4 @@
-package Tests.Suites;
+package FullSuite;
 
 import Base.BaseTest;
 import org.testng.annotations.Test;

@@ -1,12 +1,12 @@
-package Tests.AllTests.CreatorClick;
+package AllTests.Counter;
 
 import Base.BaseTest;
 import org.testng.annotations.Test;
 
-public class CreatorUrlTest extends BaseTest {
+public class CounterTest extends BaseTest {
 
     @Test
-    public void CreatorLink() throws InterruptedException {
+    public void counterTest() throws InterruptedException {
         basic.open("https://meau.in/signup");
         basic.WaitElement("//input[@id='usernameID']");
         loginka.EnterLoginData();
@@ -14,11 +14,19 @@ public class CreatorUrlTest extends BaseTest {
         basic.open("https://meau.in/home");
         homeSearch.searchSomething("test1");
         Thread.sleep(2000);
-        clicks.clickOncreator();
+        String attrib = asserts.vievcounterAtt();
+        clicks.ClickonName();
+
         basic.TabSwitch();
-        asserts.assertUrl("https://meau.in/usercontributor/houseinface");
+        Thread.sleep(2000);
         basic.ReturnFirstTab();
 
+        basic.open("https://meau.in/home");
+        homeSearch.searchSomething("test1");
+        Thread.sleep(2000);
+        asserts.AttplusOne(attrib);
+
         basic.logOut();
+
     }
 }

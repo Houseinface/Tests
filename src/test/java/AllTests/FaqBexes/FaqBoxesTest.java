@@ -1,4 +1,4 @@
-package Tests.AllTests.FaqBexes;
+package AllTests.FaqBexes;
 
 import Base.BaseTest;
 import org.testng.annotations.Test;

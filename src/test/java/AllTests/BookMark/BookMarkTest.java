@@ -1,4 +1,4 @@
-package Tests.AllTests.BookMark;
+package AllTests.BookMark;
 
 import Base.BaseTest;
 import org.testng.annotations.Test;

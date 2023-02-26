@@ -1,23 +1,20 @@
-package Tests.AllTests.NameClick;
+package AllTests.IconClick;
 
 import Base.BaseTest;
 import org.testng.annotations.Test;
 
-public class NameClickTest extends BaseTest {
-
+public class IconClickTest extends BaseTest {
     @Test
-    public void namelink() throws InterruptedException {
+    public void IconT () throws InterruptedException {
         basic.open("https://meau.in/signup");
         basic.WaitElement("//input[@id='usernameID']");
         loginka.EnterLoginData();
         basic.WaitElement("//span[@id='leftNav-dashboard-text']");
         basic.open("https://meau.in/home");
-        homeSearch.searchSomething("test1");
+        homeSearch.searchSomething("test");
         Thread.sleep(2000);
-        clicks.ClickonName();
-        basic.TabSwitch();
-        basic.assertUrl("https://meau.in/dimastest1");
-        basic.ReturnFirstTab();
+        clicks.ClickOnIcon();
+        asserts.AssertIconBigImage();
 
         basic.logOut();
     }
