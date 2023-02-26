@@ -3,7 +3,7 @@ package FullSuite;
 import Base.BaseTest;
 import org.testng.annotations.Test;
 
-public class UnionTestLogoutFirst extends BaseTest {
+public class UnionLogoutFirstTest extends BaseTest {
     @Test(priority = 1)
     public void BookmarkClick() throws InterruptedException {
         try {
@@ -25,7 +25,7 @@ public class UnionTestLogoutFirst extends BaseTest {
 
     }
     @Test(priority = 2)
-    public void BookmarkClickPostCond() throws InterruptedException {
+    public void BookmarkClickPostCond() {
         basic.open("https://meau.in/saved-linktrees");
         basic.WaitElementCss(".linktreeBookmarkClass");
         clicks.bookclickedlistClick();
