@@ -14,7 +14,7 @@ public class CommonCore {
 
         switch (Browser){
             case "Chrome":
-                System.setProperty("webdriver.chrome.driver", "E:\\Tests\\src\\main\\resources\\chromedriver.exe");
+                System.setProperty("webdriver.chrome.driver", "src\\main\\resources\\chromedriver.exe");
                 driver = new ChromeDriver();
                 break;
         }
