@@ -12,10 +12,9 @@ public class SpinnerAppearsTest extends BaseTest {
         basic.WaitElement("//input[@id='usernameID']");
         loginka.EnterLoginData();
         basic.WaitElement("//span[@id='leftNav-dashboard-text']");
+
         basic.open("https://meau.in/home");
         homeSearch.searchSomething("test");
         asserts.AssertSpinner();
-
-        basic.logOut();
     }
 }

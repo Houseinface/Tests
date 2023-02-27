@@ -10,12 +10,11 @@ public class IconClickTest extends BaseTest {
         basic.WaitElement("//input[@id='usernameID']");
         loginka.EnterLoginData();
         basic.WaitElement("//span[@id='leftNav-dashboard-text']");
+
         basic.open("https://meau.in/home");
         homeSearch.searchSomething("test");
         Thread.sleep(2000);
         clicks.ClickOnIcon();
         asserts.AssertIconBigImage();
-
-        basic.logOut();
     }
 }

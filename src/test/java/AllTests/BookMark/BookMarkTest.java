@@ -11,6 +11,7 @@ public class BookMarkTest extends BaseTest {
         basic.WaitElement("//input[@id='usernameID']");
         loginka.EnterLoginData();
         basic.WaitElement("//span[@id='leftNav-dashboard-text']");
+
         basic.open("https://meau.in/home");
         homeSearch.searchSomething("test1");
         Thread.sleep(1000);
@@ -19,16 +20,5 @@ public class BookMarkTest extends BaseTest {
         asserts.BookClicked();
         clicks.bookclicked();
         asserts.BookDealog();
-
-    }
-    @Test(priority = 2)
-    public void BookmarkClickPostCond() throws InterruptedException {
-        basic.open("https://meau.in/saved-linktrees");
-        basic.WaitElementCss(".linktreeBookmarkClass");
-        clicks.bookclickedlistClick();
-        basic.WaitElementCss(".swal2-confirm.swal2-styled");
-        clicks.delpopupyes();
-
-        basic.logOut();
     }
 }

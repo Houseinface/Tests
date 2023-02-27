@@ -11,6 +11,7 @@ public class CreatorUrlTest extends BaseTest {
         basic.WaitElement("//input[@id='usernameID']");
         loginka.EnterLoginData();
         basic.WaitElement("//span[@id='leftNav-dashboard-text']");
+
         basic.open("https://meau.in/home");
         homeSearch.searchSomething("test1");
         Thread.sleep(2000);
@@ -18,7 +19,5 @@ public class CreatorUrlTest extends BaseTest {
         basic.TabSwitch();
         asserts.assertUrl("https://meau.in/usercontributor/houseinface");
         basic.ReturnFirstTab();
-
-        basic.logOut();
     }
 }

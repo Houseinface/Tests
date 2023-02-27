@@ -11,6 +11,7 @@ public class NameClickTest extends BaseTest {
         basic.WaitElement("//input[@id='usernameID']");
         loginka.EnterLoginData();
         basic.WaitElement("//span[@id='leftNav-dashboard-text']");
+
         basic.open("https://meau.in/home");
         homeSearch.searchSomething("test1");
         Thread.sleep(2000);
@@ -18,7 +19,5 @@ public class NameClickTest extends BaseTest {
         basic.TabSwitch();
         basic.assertUrl("https://meau.in/dimastest1");
         basic.ReturnFirstTab();
-
-        basic.logOut();
     }
 }

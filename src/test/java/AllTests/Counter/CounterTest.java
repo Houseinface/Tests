@@ -11,6 +11,7 @@ public class CounterTest extends BaseTest {
         basic.WaitElement("//input[@id='usernameID']");
         loginka.EnterLoginData();
         basic.WaitElement("//span[@id='leftNav-dashboard-text']");
+
         basic.open("https://meau.in/home");
         homeSearch.searchSomething("test1");
         Thread.sleep(2000);
@@ -25,8 +26,5 @@ public class CounterTest extends BaseTest {
         homeSearch.searchSomething("test1");
         Thread.sleep(2000);
         asserts.AttplusOne(attrib);
-
-        basic.logOut();
-
     }
 }

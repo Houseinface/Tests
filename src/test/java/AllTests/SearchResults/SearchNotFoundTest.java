@@ -10,10 +10,9 @@ public class SearchNotFoundTest extends BaseTest {
         basic.WaitElement("//input[@id='usernameID']");
         loginka.EnterLoginData();
         basic.WaitElement("//span[@id='leftNav-dashboard-text']");
+
         basic.open("https://meau.in/home");
         homeSearch.searchSomething("ddrrdrdyy");
         asserts.AssertNotFound();
-
-        basic.logOut();
     }
 }

@@ -48,7 +48,7 @@ public class FeaturesLinkTest extends BaseTest {
         basic.ReturnFirstTab();
     }
     @Test
-    public void featureslinksLogined() throws InterruptedException {
+    public void featureslinksLogined() {
         basic.open("https://meau.in/signup");
         loginka.EnterLoginData();
         basic.WaitElement("//span[@id='leftNav-dashboard-text']");
@@ -93,7 +93,5 @@ public class FeaturesLinkTest extends BaseTest {
         basic.TabSwitch();
         basic.assertUrl("https://meau.in/add-on-features#linkslocker");
         basic.ReturnFirstTab();
-
-        basic.logOut();
     }
 }
