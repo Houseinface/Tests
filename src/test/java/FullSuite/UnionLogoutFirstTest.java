@@ -14,6 +14,7 @@ public class UnionLogoutFirstTest extends BaseTest {
         basic.WaitElement("//input[@id='usernameID']");
         loginka.EnterLoginData();
         basic.WaitElement("//span[@id='leftNav-dashboard-text']");
+
         basic.open("https://meau.in/home");
         homeSearch.searchSomething("test1");
         Thread.sleep(1000);
@@ -22,7 +23,6 @@ public class UnionLogoutFirstTest extends BaseTest {
         asserts.BookClicked();
         clicks.bookclicked();
         asserts.BookDealog();
-
     }
     @Test(priority = 3)
     public void counterTest() throws InterruptedException {
@@ -34,6 +34,7 @@ public class UnionLogoutFirstTest extends BaseTest {
         basic.WaitElement("//input[@id='usernameID']");
         loginka.EnterLoginData();
         basic.WaitElement("//span[@id='leftNav-dashboard-text']");
+
         basic.open("https://meau.in/home");
         homeSearch.searchSomething("test1");
         Thread.sleep(2000);
@@ -48,7 +49,6 @@ public class UnionLogoutFirstTest extends BaseTest {
         homeSearch.searchSomething("test1");
         Thread.sleep(2000);
         asserts.AttplusOne(attrib);
-
     }
     @Test(priority = 3)
     public void CreatorLink() throws InterruptedException {
@@ -60,6 +60,7 @@ public class UnionLogoutFirstTest extends BaseTest {
         basic.WaitElement("//input[@id='usernameID']");
         loginka.EnterLoginData();
         basic.WaitElement("//span[@id='leftNav-dashboard-text']");
+
         basic.open("https://meau.in/home");
         homeSearch.searchSomething("test1");
         Thread.sleep(2000);
@@ -67,7 +68,6 @@ public class UnionLogoutFirstTest extends BaseTest {
         basic.TabSwitch();
         asserts.assertUrl("https://meau.in/usercontributor/houseinface");
         basic.ReturnFirstTab();
-
     }
     @Test(priority = 3)
     public void boxestest() throws InterruptedException {
@@ -182,7 +182,6 @@ public class UnionLogoutFirstTest extends BaseTest {
         basic.TabSwitch();
         basic.assertUrl("https://meau.in/add-on-features#linkslocker");
         basic.ReturnFirstTab();
-
     }
     @Test(priority = 3)
     public void IconT () throws InterruptedException {
@@ -194,12 +193,12 @@ public class UnionLogoutFirstTest extends BaseTest {
         basic.WaitElement("//input[@id='usernameID']");
         loginka.EnterLoginData();
         basic.WaitElement("//span[@id='leftNav-dashboard-text']");
+
         basic.open("https://meau.in/home");
         homeSearch.searchSomething("test");
         Thread.sleep(2000);
         clicks.ClickOnIcon();
         asserts.AssertIconBigImage();
-
     }
     @Test(priority = 3)
     public void MainPlinks() {
@@ -246,12 +245,10 @@ public class UnionLogoutFirstTest extends BaseTest {
         basic.assertUrl("https://meau.in/signup");
         basic.ReturnFirstTab();
 
-
         buttons.Clickcustomdes();
         basic.TabSwitch();
         basic.assertUrl("https://meau.in/signup");
         basic.ReturnFirstTab();
-
 
         buttons.ClickseeLT();
         basic.TabSwitch();
@@ -275,6 +272,7 @@ public class UnionLogoutFirstTest extends BaseTest {
         basic.WaitElement("//input[@id='usernameID']");
         loginka.EnterLoginData();
         basic.WaitElement("//span[@id='leftNav-dashboard-text']");
+
         basic.open("https://meau.in/home");
         homeSearch.searchSomething("test1");
         Thread.sleep(2000);
@@ -282,7 +280,6 @@ public class UnionLogoutFirstTest extends BaseTest {
         basic.TabSwitch();
         basic.assertUrl("https://meau.in/dimastest1");
         basic.ReturnFirstTab();
-
     }
     @Test(priority = 3)
     public void NotFoundTest () throws InterruptedException {
@@ -294,10 +291,10 @@ public class UnionLogoutFirstTest extends BaseTest {
         basic.WaitElement("//input[@id='usernameID']");
         loginka.EnterLoginData();
         basic.WaitElement("//span[@id='leftNav-dashboard-text']");
+
         basic.open("https://meau.in/home");
         homeSearch.searchSomething("ddrrdrdyy");
         asserts.AssertNotFound();
-
     }
     @Test(priority = 3)
     public void Shareclick() throws InterruptedException {
@@ -309,12 +306,12 @@ public class UnionLogoutFirstTest extends BaseTest {
         basic.WaitElement("//input[@id='usernameID']");
         loginka.EnterLoginData();
         basic.WaitElement("//span[@id='leftNav-dashboard-text']");
+
         basic.open("https://meau.in/home");
         homeSearch.searchSomething("test1");
         Thread.sleep(2000);
         clicks.shareclick();
         asserts.sharepopupVisible();
-
     }
     @Test(priority = 3)
     public void SpinTest () throws InterruptedException {
@@ -326,9 +323,9 @@ public class UnionLogoutFirstTest extends BaseTest {
         basic.WaitElement("//input[@id='usernameID']");
         loginka.EnterLoginData();
         basic.WaitElement("//span[@id='leftNav-dashboard-text']");
+
         basic.open("https://meau.in/home");
         homeSearch.searchSomething("test");
         asserts.AssertSpinner();
-
     }
 }
