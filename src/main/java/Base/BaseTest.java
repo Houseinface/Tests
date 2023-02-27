@@ -28,6 +28,7 @@ public class BaseTest {
     protected HomeSearch homeSearch = new HomeSearch(driver);
 
     protected Asserts asserts = new Asserts(driver);
+
     protected Clicks clicks = new Clicks(driver);
     protected Buttons buttons = new Buttons(driver);
     protected AssertYouyubepopup assertYouyubepopup = new AssertYouyubepopup(driver);
