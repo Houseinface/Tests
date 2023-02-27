@@ -24,15 +24,6 @@ public class UnionLogoutFirstTest extends BaseTest {
         asserts.BookDealog();
 
     }
-    @Test(priority = 2)
-    public void BookmarkClickPostCond() {
-        basic.open("https://meau.in/saved-linktrees");
-        basic.WaitElementCss(".linktreeBookmarkClass");
-        clicks.bookclickedlistClick();
-        basic.WaitElementCss(".swal2-confirm.swal2-styled");
-        clicks.delpopupyes();
-
-    }
     @Test(priority = 3)
     public void counterTest() throws InterruptedException {
         try {

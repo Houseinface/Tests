@@ -36,17 +36,33 @@ public class BaseTest {
     protected FAQAsserts faqAsserts = new FAQAsserts(driver);
 
     @AfterTest
-    public void ClearCookies() throws InterruptedException {
+    public void ClearCookies() {
         if (ClearKookies){
             JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
             driver.manage().deleteAllCookies();
             javascriptExecutor.executeScript("window.sessionStorage.clear()");
         }
     }
-    @AfterSuite
+    @AfterSuite(dependsOnMethods = "postcond")
     public void quitB(){
         if (Browser_Close) {
             driver.quit();
         }
+    }
+    @AfterSuite
+    public void postcond() throws InterruptedException {
+        try {
+            basic.open("https://meau.in/signup");
+            basic.WaitElement("//input[@id='usernameID']");
+            loginka.EnterLoginData();
+            basic.WaitElement("//span[@id='leftNav-dashboard-text']");
+        } catch (AssertionError | Exception ignored) {
+        }
+        basic.open("https://meau.in/saved-linktrees");
+        basic.WaitElementCss(".linktreeBookmarkClass");
+        clicks.bookclickedlistClick();
+        basic.WaitElementCss(".swal2-confirm.swal2-styled");
+        clicks.delpopupyes();
+        Thread.sleep(1000);
     }
 }
