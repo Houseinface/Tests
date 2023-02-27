@@ -44,7 +44,7 @@ public class BaseTest {
             javascriptExecutor.executeScript("window.sessionStorage.clear()");
         }
     }
-    @AfterSuite(dependsOnMethods = "postcond")
+    @AfterSuite(dependsOnMethods = "postcond", alwaysRun = true)
     public void quitB(){
         if (Browser_Close) {
             driver.quit();
