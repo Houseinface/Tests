@@ -4,7 +4,7 @@ import Base.BaseTest;
 import org.testng.annotations.Test;
 
 public class UnionLogoutFirstTest extends BaseTest {
-    @Test(priority = 1)
+    @Test
     public void BookmarkClick() throws InterruptedException {
         try {
             basic.logOut();
@@ -24,7 +24,7 @@ public class UnionLogoutFirstTest extends BaseTest {
         clicks.bookclicked();
         asserts.BookDealog();
     }
-    @Test(priority = 3)
+    @Test
     public void counterTest() throws InterruptedException {
         try {
             basic.logOut();
@@ -50,7 +50,7 @@ public class UnionLogoutFirstTest extends BaseTest {
         Thread.sleep(2000);
         asserts.AttplusOne(attrib);
     }
-    @Test(priority = 3)
+    @Test
     public void CreatorLink() throws InterruptedException {
         try {
             basic.logOut();
@@ -69,7 +69,7 @@ public class UnionLogoutFirstTest extends BaseTest {
         asserts.assertUrl("https://meau.in/usercontributor/houseinface");
         basic.ReturnFirstTab();
     }
-    @Test(priority = 3)
+    @Test
     public void boxestest() throws InterruptedException {
         try {
             basic.logOut();
@@ -85,7 +85,7 @@ public class UnionLogoutFirstTest extends BaseTest {
         Thread.sleep(1000);
         faqAsserts.collapse2Show();
     }
-    @Test(priority = 3)
+    @Test
     public void featureslinks(){
         try {
             basic.logOut();
@@ -132,7 +132,7 @@ public class UnionLogoutFirstTest extends BaseTest {
         basic.assertUrl("https://meau.in/signup");
         basic.ReturnFirstTab();
     }
-    @Test(priority = 3)
+    @Test
     public void featureslinksLogined() {
         try {
             basic.logOut();
@@ -183,7 +183,7 @@ public class UnionLogoutFirstTest extends BaseTest {
         basic.assertUrl("https://meau.in/add-on-features#linkslocker");
         basic.ReturnFirstTab();
     }
-    @Test(priority = 3)
+    @Test
     public void IconT () throws InterruptedException {
         try {
             basic.logOut();
@@ -200,7 +200,7 @@ public class UnionLogoutFirstTest extends BaseTest {
         clicks.ClickOnIcon();
         asserts.AssertIconBigImage();
     }
-    @Test(priority = 3)
+    @Test
     public void MainPlinks() {
         try {
             basic.logOut();
@@ -262,7 +262,7 @@ public class UnionLogoutFirstTest extends BaseTest {
         buttons.ClickSignB();
         basic.assertUrl("https://meau.in/signup#signup");
     }
-    @Test(priority = 3)
+    @Test
     public void namelink() throws InterruptedException {
         try {
             basic.logOut();
@@ -281,7 +281,7 @@ public class UnionLogoutFirstTest extends BaseTest {
         basic.assertUrl("https://meau.in/dimastest1");
         basic.ReturnFirstTab();
     }
-    @Test(priority = 3)
+    @Test
     public void NotFoundTest () throws InterruptedException {
         try {
             basic.logOut();
@@ -296,7 +296,7 @@ public class UnionLogoutFirstTest extends BaseTest {
         homeSearch.searchSomething("ddrrdrdyy");
         asserts.AssertNotFound();
     }
-    @Test(priority = 3)
+    @Test
     public void Shareclick() throws InterruptedException {
         try {
             basic.logOut();
@@ -313,7 +313,7 @@ public class UnionLogoutFirstTest extends BaseTest {
         clicks.shareclick();
         asserts.sharepopupVisible();
     }
-    @Test(priority = 3)
+    @Test
     public void SpinTest () throws InterruptedException {
         try {
             basic.logOut();
